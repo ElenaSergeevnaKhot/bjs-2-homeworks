@@ -1,5 +1,5 @@
 function compareArrays(arr1, arr2) {
-  if (arr1.lenght !== arr2.lenght) {
+  if (arr1.length !== arr2.length) {
     return false;
   }
   return arr1.every((value, index) => {
