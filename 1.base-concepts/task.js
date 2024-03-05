@@ -39,8 +39,12 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let totalAmount = payment * countMonths;
   return +totalAmount.toFixed(2);
 }
-let percent = 10;
-let contribution = 0;
-let amount = 50000;
-let countMonths = 12;
-console.log(totalAmount);
+console.log(calculateTotalMortgage(10, 0, 50000,12));
+console.log(calculateTotalMortgage(10, 1000, 50000, 12));
+console.log(calculateTotalMortgage(10, 0, 20000, 24));
+console.log(calculateTotalMortgage(10, 1000, 20000, 24.));
+console.log(calculateTotalMortgage(10, 20000, 20000, 24));
+console.log(calculateTotalMortgage(10, 0, 10000, 36));
+console.log(calculateTotalMortgage(15, 0, 10000, 36));
+
+
