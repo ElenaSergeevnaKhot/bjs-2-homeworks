@@ -16,3 +16,31 @@ function solveEquation(a, b, c) {
   
   return roots;
 }
+
+
+
+"use strict";
+
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+  if (
+    typeof percent !== "number" ||
+    typeof contribution !== "number" ||
+    typeof amount !== "number" ||
+    typeof countMonths !== "number"
+  ) {
+    return false;
+  }
+
+  let percentMonth = percent / 100 / 12;
+  let creditBody = amount - contribution;
+  let payment =
+    creditBody *
+    (percentMonth + percentMonth / ((1 + percentMonth) ** countMonths - 1));
+  let totalAmount = payment * countMonths;
+  return +totalAmount.toFixed(2);
+}
+let percent = 10;
+let contribution = 0;
+let amount = 50000;
+let countMonths = 12;
+console.log(totalAmount);
